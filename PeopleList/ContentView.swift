@@ -10,7 +10,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        NavigationView {
+            List(["Tim Cook", "Steve Jobs", "Jony Ive"], id: \.self) { name in
+                Text(name)
+            }.navigationBarTitle("People")
+        }
     }
 }
 
